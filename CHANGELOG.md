@@ -5,7 +5,26 @@ All notable changes to the "nft" extension will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.4.0] - 2021-04-19
+
+- Bumped dev dependencies
+- Fixed colouring of maps, comments with key words, colons in strings [(#25)](https://github.com/omBratteng/vscode-nftables/issues/25)
+- Added [andreas51](https://github.com/andreas51) as a contributor
+
+## [0.3.4] - 2021-04-06
+
+- Bumped dependencies
+- Dropped support for VSCode 1.44.0
+
+## [0.3.3] - 2021-03-24
+
+- Moved webpack config to TypeScript
+- Removed test npm script
+
+## [0.3.2] - 2021-03-24
+
+- Improve formatting support to support one liners and comments
+- Set VSCode engine requirement to v1.44 (10 versions behind current release)
 
 ## [0.3.1] - 2021-03-23
 
@@ -45,7 +64,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release [`bf39000`](https://github.com/omBratteng/vscode-nftables/commit/bf39000)
 
-[Unreleased]: https://github.com/omBratteng/vscode-nftables/compare/0.3.1...HEAD
+[0.3.4]: https://github.com/omBratteng/vscode-nftables/compare/0.3.4...0.4.0
+[0.3.4]: https://github.com/omBratteng/vscode-nftables/compare/0.3.3...0.3.4
+[0.3.3]: https://github.com/omBratteng/vscode-nftables/compare/0.3.2...0.3.3
+[0.3.2]: https://github.com/omBratteng/vscode-nftables/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/omBratteng/vscode-nftables/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/omBratteng/vscode-nftables/compare/0.2.1...0.3.0
 [0.2.1]: https://github.com/omBratteng/vscode-nftables/compare/0.2.0...0.2.1

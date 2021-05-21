@@ -582,7 +582,7 @@
 			}
 		},
 		"hook_spec": {
-			"match": "(type)\\s+([a-zA-Z_\\.][a-zA-Z0-9/\\-_\\.]*)\\s+(hook)\\s+([a-zA-Z_\\.][a-zA-Z0-9/\\-_\\.]*)\\s+(?:(device)\\s+([a-zA-Z_\\.][a-zA-Z0-9/\\-_\\.]*)\\s+)?(priority)\\s+(-?\\d+)",
+			"match": "(type)\\s+([a-zA-Z_\\.][a-zA-Z0-9/\\-_\\.]*)\\s+(hook)\\s+([a-zA-Z_\\.][a-zA-Z0-9/\\-_\\.]*)\\s+(?:(device)\\s+([a-zA-Z_\\.][a-zA-Z0-9/\\-_\\.]*)\\s+)?(priority)\\s+(-?\\d+|[a-z]+)",
 			"captures": {
 				"1": {
 					"name": "keyword.function.type.nft"
@@ -741,6 +741,13 @@
 				},
 				{
 					"include": "#common_block"
+				}
+			]
+		},
+		"map_block": {
+			"patterns": [
+				{
+					"include": "#set_block"
 				}
 			]
 		},
@@ -1055,7 +1062,7 @@
 					"include": "#match_stmt"
 				},
 				{
-					"match": "([^;]*)\\s+(set)\\s+([^;]*)",
+					"match": "([^;#]*)\\s+(set)\\s+([^;]*)",
 					"name": "meta.stmt.payload.nft",
 					"captures": {
 						"1": {
@@ -1085,7 +1092,7 @@
 					"include": "#verdict_expr"
 				},
 				{
-					"begin": "([^;]*)\\s+(vmap)",
+					"begin": "([^;#]*)\\s+(vmap)",
 					"name": "meta.stmt.verdict",
 					"beginCaptures": {
 						"1": {
@@ -1984,7 +1991,7 @@
 					"include": "#set_expr"
 				},
 				{
-					"match": "([^,;:{]+)\\s*(:)\\s*([^,;:}]+)",
+					"match": "([^\",;:{]+)\\s*(:)\\s*([^\",;:}]+)",
 					"captures": {
 						"1": {
 							"patterns": [
